@@ -1,0 +1,55 @@
+img {
+  width: 50px;
+  height: auto;
+  padding-top: 0.9em;
+  display: block;
+  margin: auto;
+}
+
+.user-image {
+  max-width: 100%;
+}
+.name {
+  margin-bottom: 0.4em;
+  font-size: 20px;
+  color: rgb(130, 161, 179);
+  font-weight: bold;
+}
+.date {
+  text-align: left;
+}
+.lighter {
+  color: rgb(197 212 223);
+}
+.request-status {
+  color: rgb(161, 219, 169);
+  font-size: 17px;
+  font-weight: bold;
+}
+.description {
+  font-weight: 500;
+}
+.file-container {
+  margin-top: 1.4em;
+  background-color: rgb(246, 246, 246);
+  padding-inline-start: 8px;
+  padding-bottom: 8px;
+}
+.file-img-container {
+  margin-left: 1em;
+}
+.file-img {
+  width: 30px;
+}
+.file-name {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+.recommendation-container{
+  background-color: rgb(246, 246, 246);
+}
+.recommendation-header{
+  color: rgb(114,126,133);
+  font-size: 20px;
+  margin-bottom: 10px;
+}

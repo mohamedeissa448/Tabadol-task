@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-8">
+    <div class="row">
+      <div class="col-3 p-0">
+        <img
+          [src]="item.imageUrl ||  'https://i.pinimg.com/564x/6d/26/e2/6d26e264e3c11ec2c8c9025c91279ba1.jpg'"
+          alt="user-image"
+          class="user-image"
+        />
+      </div>
+      <div class="col">
+        <p class="name">{{ item.name }}</p>
+        <p class="job lighter">{{ item.job }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <p class="date lighter">{{ item.date | date: 'dd/MM/yyyy' }}</p>
+  </div>
+</div>
+
+<ng-container>
+  <p *ngIf="item.requestStatus === RequestStatus.RequestPrepared " class="request-status">
+    تم اعداد الطلب
+  </p>
+</ng-container>
+
+<ng-container>
+  <p *ngIf="item.requestStatus === RequestStatus.RequestAssigned " class="request-status">
+    تم اسناد الطلب
+  </p>
+</ng-container>
+
+<ng-container>
+  <p *ngIf="item.requestStatus === RequestStatus.RequestSubmitted " class="request-status">
+    تم رفع الطلب
+  </p>
+</ng-container>
+
+<p *ngIf="item.description" class="description">{{ item.description }}</p>
+
+<div *ngIf="item.file" class="file-container">
+  <div class="row">
+    <div class="col-1 file-img-container">
+      <img
+        class="file-img"
+        [src]="item.file.url"
+        alt="file-icon"
+      />
+    </div>
+    <div class="col">
+      <p class="file-name">{{ item.file.name }}</p>
+      <p class="lighter mb-0">{{ item.file.type }} {{ item.file.size }} MB</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="item.recommendation" class="recommendation-container">
+  <p class="recommendation-header">التوصية</p>
+ <p class="lighter">{{ item.recommendation }}</p>
+</div>
+

@@ -1,0 +1,8 @@
+<div class="container">
+  <app-accordion  title="سجل العمليات">
+    <ng-container *ngFor="let item of items;let i =index">
+      <app-history-item  [item]="item"></app-history-item>
+      <hr *ngIf="i < items.length - 1"/>
+    </ng-container>
+  </app-accordion>
+</div>
